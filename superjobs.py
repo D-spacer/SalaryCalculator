@@ -1,13 +1,12 @@
 import requests
 import salary_calculator
 
-def predict_rub_salary_sj(query, pages=1):
+def predict_rub_salary_sj(query, sj_api_key, pages=1):
   comulative = 0
   count = 0
-  key = 'v3.h.4419416.9944a64c342f275a7d558137f9aa0a817a3262dd.6775a860540a8b7b854f5fb005b38b467653988d'
   for page in range(pages):
     header = {
-      'X-Api-App-Id': key
+      'X-Api-App-Id': sj_api_key
     }
     parameters = {
       "page": page,
