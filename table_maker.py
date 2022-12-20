@@ -8,4 +8,4 @@ def create_table(dictionary):
     table_layout[index].append(dictionary[language]['Average salary'])
     table_layout[index].append(dictionary[language]['Queries'])
   table = AsciiTable(table_layout)
-  print(table.table)
+  return table.table
