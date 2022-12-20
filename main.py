@@ -19,8 +19,8 @@ def main():
       headhunter_result[language] = {'Average salary': salary, 'Queries': count}
     except requests.exceptions.HTTPError:
       sys.exit('Неверная ссылка')
-  table_maker.create_table(superjob_result)
-  table_maker.create_table(headhunter_result)
+  print(table_maker.create_table(superjob_result))
+  print(table_maker.create_table(headhunter_result))
     
   
 if __name__ == "__main__":
