@@ -9,14 +9,6 @@
 
 ```git clone https://github.com/D-spacer/SalaryCalculator.git```
 
-Также необходимо установить пакеты, которые используются в скрипте, с помощью следующих команд:
-
-```
-pip install terminaltables
-pip install requests
-pip install python-dotenv
-```
-
 Проверить установленные пакеты можно с помощью команды `pydoc modules`.
 
 ### Зависимости
@@ -27,6 +19,9 @@ pip install python-dotenv
 ```SJ_API_KEY=<токен>```
 
 Документация к сервису HeadHunter находится здесь: https://dev.hh.ru/
+
+Кроме того для работы необходимы определенные пакеты, такие как `requests`.
+Установить пакеты, необходимые для работы программы, можно с помощью команды `pip install -r requirements.txt`
 
 ### Запуск скрипта
 
