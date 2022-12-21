@@ -23,8 +23,5 @@ def predict_rub_salary_sj(language, sj_api_key, pages=1, city=4, results_per_pag
     for job in decoded_response['objects']:
       count += 1
       salary = salary_calculator.predict_salary(job["payment_from"], job["payment_to"])
-      comulative += salary
-  try:    
+      comulative += salary 
     return count, int(comulative / count)
-  except ZeroDivisionError:
-    print('По данному запросу не найдено вакансий, измените запрос')
