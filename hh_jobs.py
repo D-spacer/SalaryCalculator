@@ -19,8 +19,5 @@ def predict_rub_salary_hh(vacancy, pages=1, period=30, region=1, results_per_pag
     for job in decoded_response['items']:
       count += 1
       salary = salary_calculator.predict_salary(job['salary']['from'], job['salary']['to'])
-      comulative += salary
-  try:    
-    return count, int(comulative / count)
-  except ZeroDivisionError:
-    print('По данному запросу не найдено вакансий, измените запрос')
+      comulative += salary  
+  return count, int(comulative / count)
