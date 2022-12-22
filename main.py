@@ -22,7 +22,9 @@ def main():
       sys.exit('Неверная ссылка')
     except ZeroDivisionError:
       print('По данному запросу не найдено вакансий, измените запрос')
+  print('Вакансии Superjob')
   print(table_maker.create_table(superjob_stats))
+  print('Вакансии HeadHunter')
   print(table_maker.create_table(headhunter_stats))
     
   
