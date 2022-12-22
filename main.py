@@ -1,5 +1,6 @@
 import requests
 import sys
+import os
 import hh_jobs
 import superjobs
 import table_maker
@@ -21,8 +22,8 @@ def main():
       sys.exit('Неверная ссылка')
     except ZeroDivisionError:
       print('По данному запросу не найдено вакансий, измените запрос')
-  print(table_maker.create_table(superjob_result))
-  print(table_maker.create_table(headhunter_result))
+  print(table_maker.create_table(superjob_dict))
+  print(table_maker.create_table(headhunter_dict))
     
   
 if __name__ == "__main__":
