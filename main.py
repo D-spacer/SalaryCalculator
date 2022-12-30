@@ -20,8 +20,6 @@ def main():
         headhunter_stats[language] = {'Average salary': salary, 'Queries': count}
       except requests.exceptions.HTTPError:
         sys.exit('Неверная ссылка')
-      except ZeroDivisionError:
-        print('По данному запросу не найдено вакансий, измените запрос')
     print('Вакансии Superjob')
     print(table_maker.create_table(superjob_stats))
     print('Вакансии HeadHunter')
