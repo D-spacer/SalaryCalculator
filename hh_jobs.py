@@ -20,4 +20,5 @@ def predict_rub_salary_hh(vacancy, pages=1, period=30, region=1, results_per_pag
         count += 1
         salary = salary_calculator.predict_salary(job['salary']['from'], job['salary']['to'])
         comulative += salary  
-    return count, int(comulative / count)
+    if count != 0:
+        return count, int(comulative / count)
