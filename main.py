@@ -14,10 +14,10 @@ def main():
     sj_api_key = os.environ['SJ_API_KEY']
     for language in languages:
       try:
-        count, salary = superjobs.predict_rub_salary_sj(language, sj_api_key)
-        superjob_stats[language] = {'Average salary': salary, 'Queries': count}
-        count, salary = hh_jobs.predict_rub_salary_hh(language)
-        headhunter_stats[language] = {'Average salary': salary, 'Queries': count}
+        count, with_salary_count, salary = superjobs.predict_rub_salary_sj(language, sj_api_key)
+        superjob_stats[language] = {'Average salary': salary, 'Queries': count, 'Processed': with_salary_count}
+        count, with_salary_count, salary = hh_jobs.predict_rub_salary_hh(language)
+        headhunter_stats[language] = {'Average salary': salary, 'Queries': count, 'Processed': with_salary_count}
       except requests.exceptions.HTTPError:
         sys.exit('Неверная ссылка')
     print('Вакансии Superjob')
