@@ -24,4 +24,4 @@ def predict_rub_salary_hh(vacancy, pages=1, period=30, region=1, results_per_pag
 		    with_salary += 1
       	    comulative += salary
     if count:
-        return count, with_salary, int(comulative / count)
+        return count, with_salary, int(comulative / with_salary)
