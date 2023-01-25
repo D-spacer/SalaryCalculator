@@ -27,4 +27,4 @@ def predict_rub_salary_sj(language, sj_api_key, pages=1, city=4, results_per_pag
             with_salary += 1
             comulative += salary
     if count:
-        return count, with_salary, int(comulative / count)
+        return count, with_salary, int(comulative / with_salary)
