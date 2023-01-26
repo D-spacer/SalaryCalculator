@@ -26,5 +26,5 @@ def predict_rub_salary_sj(language, sj_api_key, pages=1, city=4, results_per_pag
             salary = salary_calculator.predict_salary(job["payment_from"], job["payment_to"])
             with_salary += 1
             comulative += salary
-    if count:
+    if with_salary:
         return count, with_salary, int(comulative / with_salary)
